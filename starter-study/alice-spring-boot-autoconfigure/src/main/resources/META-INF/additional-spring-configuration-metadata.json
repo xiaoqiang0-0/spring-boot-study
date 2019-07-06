@@ -1,0 +1,29 @@
+{
+  "properties": [
+    {
+      "name": "alice.service.name",
+      "defaultValue": "",
+      "description": "service name"
+    },
+    {
+      "name": "alice.service.host",
+      "defaultValue": "localhost",
+      "description": "service host"
+    },
+    {
+      "name": "alice.service.port",
+      "defaultValue": 12345,
+      "description": "service port"
+    },
+    {
+      "name": "alice.service.username",
+      "defaultValue": "",
+      "description": "service username"
+    },
+    {
+      "name": "alice.service.password",
+      "defaultValue": "",
+      "description": "service password"
+    }
+  ]
+}
