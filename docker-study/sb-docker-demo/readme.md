@@ -26,3 +26,5 @@ jar -xf ../*.jar
 ```bash
 docker build -t myorg/myapp .
 ```
+
+## 上传私库
