@@ -28,3 +28,16 @@ docker build -t myorg/myapp .
 ```
 
 ## 上传私库
+1) 搭建镜像仓库（或者使用第三方）  
+2) 登录仓库(已阿里云为例)  
+    ```sh
+    $ docker login --username=【登录邮箱】 registry.cn-hangzhou.aliyuncs.com
+    ```
+3) `Tag`
+    ```sh
+    $ docker tag [镜像本地id] registry.cn-hangzhou.aliyuncs.com/[命名空间]/[远程镜像名]:[镜像版本号]
+    ```
+4) `push`
+    ```sh
+    $ docker push registry.cn-hangzhou.aliyuncs.com/[命名空间]/[远程镜像名]:[镜像版本号]
+    ```
