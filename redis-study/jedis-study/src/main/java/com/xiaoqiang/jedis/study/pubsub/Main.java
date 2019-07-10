@@ -25,7 +25,7 @@ public class Main {
         for (;;){
             TimeUnit.SECONDS.sleep(3);
             publisher1.publish("Hello subscriber! "+i++);
-            publisher2.publish("His subscriber! "+i++);
+            publisher2.publish("Hi subscriber! "+i++);
         }
     }
 }
