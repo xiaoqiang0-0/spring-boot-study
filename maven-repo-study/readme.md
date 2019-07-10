@@ -54,3 +54,24 @@
 ```sh
 $ mvn clean deploy -DskipTests
 ```
+> 发布源码:  
+> `pom.xml`中增加插件`maven-source-plugin`  
+> ```xml
+> <plugin>
+>     <groupId>org.apache.maven.plugins</groupId>
+>     <artifactId>maven-source-plugin</artifactId>
+>     <version>3.1.0</version>
+>     <configuration>
+>         <attach>true</attach>
+>     </configuration>
+>     <executions>
+>         <execution>
+>             <phase>compile</phase>
+>             <goals>
+>                 <goal>jar</goal>
+>             </goals>
+>         </execution>
+>     </executions>
+> </plugin>
+> ```  
+> 
