@@ -7,6 +7,7 @@
         <module>starter-study</module>
         <module>registry-study</module>
         <module>docker-study</module>
+        <module>maven-repo-study</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -46,6 +47,22 @@
                         <execution>
                             <goals>
                                 <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
                             </goals>
                         </execution>
                     </executions>

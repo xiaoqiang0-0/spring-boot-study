@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-boot-study</artifactId>
+        <groupId>com.xiaoqiang</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>maven-repo-study</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>rdc-private-repo</id>
+            <repositories>
+                <repository>
+                    <id>rdc-releases</id>
+                    <url>https://repo.rdc.aliyun.com/repository/78649-release-Yqebsi/</url>
+                </repository>
+                <repository>
+                    <id>rdc-snapshots</id>
+                    <url>https://repo.rdc.aliyun.com/repository/78649-snapshot-qU7VFb/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/78649-release-Yqebsi/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/78649-snapshot-qU7VFb/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
