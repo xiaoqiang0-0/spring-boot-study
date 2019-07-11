@@ -22,11 +22,11 @@ public class CuratorDemo {
     }
 
     private static void getDate(CuratorFramework framework) throws Exception {
-        System.out.println(new String(framework.getData().forPath("/data/createTest")));
+        System.out.println(new String(framework.getData().forPath("/data/curdTest")));
     }
 
     private static void updateData(CuratorFramework framework) throws Exception {
-        framework.setData().forPath("/data/createTest", "Updated test".getBytes());
+        framework.setData().forPath("/data/curdTest", "Updated test".getBytes());
     }
 
     private static void deleteData(CuratorFramework framework) throws Exception {
