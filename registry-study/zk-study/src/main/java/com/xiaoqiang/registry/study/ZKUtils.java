@@ -25,7 +25,9 @@ public class ZKUtils {
     }
 
     public static CuratorFramework getCuratorFramework() {
-        return CuratorFrameworkFactory.builder().connectString(L_CLUSTER_URL).sessionTimeoutMs(SESSION_TIMEOUT)
+        CuratorFramework client = CuratorFrameworkFactory.builder().connectString(L_CLUSTER_URL).sessionTimeoutMs(SESSION_TIMEOUT)
                 .retryPolicy(new ExponentialBackoffRetry(BASE_SLEEP_TIME, MAX_RETRIES)).build();
+        client.start();
+        return client;
     }
 }
